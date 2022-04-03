@@ -23,4 +23,4 @@ if __name__ == "__main__":
     print(best_sum(7, [5, 3, 4, 7], dict()))
     print(best_sum(8, [2, 3, 5], dict()))
     print(best_sum(8, [1, 4, 5], dict()))
-    print(best_sum(100, [1, 2, 5, 25], dict()))
+    print(best_sum(500, [1, 2, 5, 25], dict()))
