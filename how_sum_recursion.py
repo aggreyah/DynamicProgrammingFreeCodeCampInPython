@@ -5,8 +5,9 @@ def how_sum(target_sum, ints_list):
         return None
 
     for item in ints_list:
-        result_list = how_sum(target_sum - item, ints_list)
-        if result_list is not None:
+        remainder_list = how_sum(target_sum - item, ints_list)
+        if remainder_list is not None:
+            result_list = remainder_list[:]
             result_list.append(item)
             return result_list
 

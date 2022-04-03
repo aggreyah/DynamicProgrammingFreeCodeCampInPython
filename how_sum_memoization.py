@@ -7,8 +7,9 @@ def how_sum(target_sum, ints_list, a_dict):
         return None
 
     for item in ints_list:
-        result_list = how_sum(target_sum - item, ints_list, a_dict)
-        if result_list is not None:
+        remainder_list = how_sum(target_sum - item, ints_list, a_dict)
+        if remainder_list is not None:
+            result_list = remainder_list[:]
             result_list.append(item)
             a_dict[target_sum] = result_list
             return a_dict[target_sum]
@@ -22,4 +23,4 @@ if __name__ == "__main__":
     print(how_sum(7, [5, 3, 4, 7], dict()))
     print(how_sum(7, [2, 4], dict()))
     print(how_sum(8, [2, 3, 5], dict()))
-    print(how_sum(5368, [7, 14], dict()))
+    print(how_sum(5356, [7, 14], dict()))
