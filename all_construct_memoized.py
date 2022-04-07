@@ -16,6 +16,7 @@ def all_construct(target_word, word_bank, memo):
             for item in all_construct_target:
                 item.insert(0, word)
                 result.append(item)
+
     memo[target_word] = result
     return result
 
