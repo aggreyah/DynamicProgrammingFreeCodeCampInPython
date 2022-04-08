@@ -12,7 +12,7 @@ def best_sum(target_sum, ints_list):
                 if i + num <= target_sum:
                     current = table[i][:]
                     current.append(num)
-                    if table[i + num] is None or len(table[i + num]) > len(current):
+                    if not table[i + num] or len(table[i + num]) > len(current):
                         table[i + num] = current[:]
 
     return table[target_sum]
